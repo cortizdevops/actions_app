@@ -11,10 +11,10 @@ jobs:
         run: ls
 
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Notificacion Slack
-        uses: rtCamp/action-slack-notify@v2.3.1
+        uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL_SLACK }}
         with:
