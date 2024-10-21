@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Slack Notification
-      uses: gymshark/slack-notifier-action@v1.0.2
-      with:
-        webhook_url: 'https://hooks.slack.com/services/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' 
+      uses: ry-itto/slack_notify_actions@1.0.1
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        SLACK_ICON_URL: 'https://github.com/ry-itto.png'
