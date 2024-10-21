@@ -12,5 +12,5 @@ jobs:
     - name: Slack Notification
       uses: ry-itto/slack_notify_actions@1.0.1
       env:
-        SLACK_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        SLACK_WEBHOOK_URL: ${{secrets.WEBHOOK_URL}}
         SLACK_ICON_URL: 'https://github.com/ry-itto.png'
