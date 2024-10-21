@@ -7,16 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls
-        run: ls
-
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Notificacion Slack
+      - name: Notificacion
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        with:
-          author_name: "Action"
-          fields: repo,message,commit,author,action,eventName
