@@ -16,7 +16,7 @@ jobs:
       - name: Notificacion Slack
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL_SLACK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         with:
           author_name: "Action"
           fields: repo,message,commit,author,action,eventName
