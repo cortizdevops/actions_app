@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Slack Notification
-      uses: drilonrecica/action-slack-notify@0.0.3
-      env:
-        SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL }}
+      uses: gymshark/slack-notifier-action@v1.0.2
+      with:
+        webhook_url: 'https://hooks.slack.com/services/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' 
