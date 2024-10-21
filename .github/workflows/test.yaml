@@ -8,9 +8,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       
       - name: Notificacion
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@v2.1.1
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
