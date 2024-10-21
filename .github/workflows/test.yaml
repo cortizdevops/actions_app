@@ -4,8 +4,16 @@ on: [push]
 
 jobs:
   test-app:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: ls
         run: ls
+      
+      - name: Notificacion Slack
+        uses: rtCamp/action-slack-notify@v2.3.1
+        env:
+          SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL_SLACK }}
+        with:
+          author_name: "Action"
+          fields: repo, message, commit, author, action, eventName
