@@ -1,4 +1,4 @@
-name: App Runners
+name: App Slack
 
 on: [push]
 
@@ -13,4 +13,4 @@ jobs:
       - name: Notificacion
         uses: rtCamp/action-slack-notify@v2.1.1
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.WEBHOOK_URL }}
