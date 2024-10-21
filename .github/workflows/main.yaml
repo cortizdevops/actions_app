@@ -39,5 +39,5 @@ jobs:
         run: vendor/bin/phpunit
 
       - name: deploy
-        if: steps.test,outcone == 'success'
+        if: steps.test.outcone == 'success'
         run: ls 
