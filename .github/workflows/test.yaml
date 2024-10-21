@@ -1,0 +1,11 @@
+name: App Runners
+
+on: [push]
+
+jobs:
+  test-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ls
+        run: ls -al
